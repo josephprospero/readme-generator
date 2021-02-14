@@ -20,19 +20,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'projectRepo',
-        message: 'What is the Github repo name for your project?',
-        validate: projectRepo => {
-            if (projectRepo) {
-                return true;
-            } else {
-                console.log('Please enter your repo name!')
-                return false;
-            };
-        } 
-    },
-    {
-        type: 'input',
         name: 'projectDescription',
         message: 'Give a brief description of your project.',
         validate: projectDescription => {
@@ -69,14 +56,15 @@ const questions = [
         name: 'projectLicenses',
         message:'Please select the license used in your project.',
         choices: [
-            'Apache',
-            'Boost',
-            'GNU GPL v3',
+            'Apache License 2.0',
+            'Boost Software 1.0',
             'GNU AGPL v3',
-            'GNU FDL v1.3',
+            'GNU FDLv 1.3',
+            'GNU GPL v3',
+            'GNU LGPL v3',
             'ISC',
-            'MIT',
-            'Mozilla'
+            'MIT License',
+            'Mozilla Public License 2.0'
         ]
     },
     {
@@ -109,14 +97,28 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = (fileName, data) => {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            console.log(err)
+            return;
+        }
+        console.log('file created')
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {
+const init = () => {
     return inquirer.prompt(
         questions
     )
 };
 
 // Function call to initialize app
-init();
+init()
+    .then(data => {
+        return generateMarkdown(data);
+    })
+    .then(generateMarkdown => {
+        return writeToFile('./dist/README.md', generateMarkdown);
+    });
