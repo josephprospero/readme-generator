@@ -8,4 +8,5 @@ https://drive.google.com/file/d/1s4UPejmpfWF5NMCAVCWxrm-M5tI23IGY/view
 
 
 ## Sample README.md Generated From the Video
+https://github.com/josephprospero/readme-generator/blob/main/dist/sampleREADME.md
 
