@@ -100,7 +100,7 @@ const renderTableOfContents = license => {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
-  - [Test](#test)
+  - [Testing](#testing)
   - [Questions](#questions)
     `
   }
@@ -109,9 +109,9 @@ const renderTableOfContents = license => {
 ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
   - [Contribution](#contribution)
-  - [Test](#test)
+  - [Testing](#testing)
+  - [License](#license)
   - [Questions](#questions)
     `
 }
@@ -147,8 +147,8 @@ module.exports = generateMarkdown => {
   ${renderLicenseSection(projectLicenses)}
 
   ## Questions
-  Any questions or concerns, please contact the developer through their GitHub or email:
-  ${data.contactUsername}
+  Any questions or concerns, please contact the developer through their GitHub or email:  
+  ${data.contactUsername}  
   ${data.contactEmail}
   `
 };

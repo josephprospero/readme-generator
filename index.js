@@ -34,7 +34,7 @@ const questions = [
     {
         type: 'input',
         name: 'projectInstallation',
-        message: 'Describe the installation process for your project. (optional)',
+        message: 'Describe the installation process for your project. (optional)'
     },
     {
         type: 'input',
@@ -47,9 +47,10 @@ const questions = [
         message: 'How can other developers contribute to your project? (If applicable)'
     },
     {
-        type: 'confirm',
+        type: 'input',
         name: 'projectTest',
         message: 'Is there a way to test your project?'
+
     },
     {
         type: 'list',
