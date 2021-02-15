@@ -83,7 +83,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contatEmail',
+        name: 'contactEmail',
         message: 'Please provide your email address.',
         validate: contactEmail => {
             if (contactEmail) {
