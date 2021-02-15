@@ -7,6 +7,6 @@ Hello! This is my README.md Generator. This tool is to help developers quickly g
 https://drive.google.com/file/d/1s4UPejmpfWF5NMCAVCWxrm-M5tI23IGY/view
 
 
-## Sample README.md Generated From the Video
+## Sample README.md generated through the generator
 https://github.com/josephprospero/readme-generator/blob/main/dist/sampleREADME.md
 
